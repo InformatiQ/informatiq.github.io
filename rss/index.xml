@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[InformatiQ]]></title><description><![CDATA[Nubi's path to Foo]]></description><link>https://informatiq.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 27 Sep 2016 08:25:40 GMT</lastBuildDate><atom:link href="https://informatiq.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Deploying openAM 12 on mesos]]></title><description><![CDATA[<div class="sect1">
+<h2 id="_background">Background</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OpenAM provides open source Authentication, Authorization, Entitlement and Federation software. We chose it as part of our internal SSO platform.
+The documentation of openAM goes into a lot of details about the installation that I don&#8217;t need to go through here again.<br>
+openAM 12 was not deigned as a stateless app, and is not meant to be runnig on an elastic env like mesos.</p>
+</div>
+<div class="paragraph">
+<p>The purpose of this doc is to highlight the main pain points and challenges in deploying openAM on a mesos cluster</p>
+</div>
+<div class="ulist">
+<div class="title"><strong>References</strong></div>
+<ul>
+<li>
+<p><a href="https://backstage.forgerock.com/#!/docs/openam/12.0.0/" class="bare">https://backstage.forgerock.com/#!/docs/openam/12.0.0/</a></p>
+</li>
+<li>
+<p><a href="http://azlabs.blogspot.fr/2015/08/openam-12-sessions.html" class="bare">http://azlabs.blogspot.fr/2015/08/openam-12-sessions.html</a></p>
+</li>
+<li>
+<p><a href="http://blogs.forgerock.org/petermajor/2015/08/sessions/" class="bare">http://blogs.forgerock.org/petermajor/2015/08/sessions/</a></p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title"><strong>Constraints</strong></div>
+<ul>
+<li>
+<p>Mesos cluster only runs stateless non-persistent apps</p>
+</li>
+<li>
+<p>Marathon framework to manage long running apps on Mesos</p>
+</li>
+<li>
+<p>Need to run multiple instances for HA</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setup">Setup</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_1_external_config_store">1. External config store</h3>
+<div class="paragraph">
+<p>Configure openAM to use openDJ for storing its configuation.<br>
+Use the openam-configurator tool to push that config file.</p>
+</div>
+<div class="paragraph">
+<p>By default openAM uses its own embeded backend for storing its config and dumping all that on disk in the openAM home as seen in the config below <code>BASE_DIR</code>+
+The first time to run this tool it will create the BASE_DIR and connect to the backend to write configs.<br>
+In subsequent runs of the configurator tool it will connect to the backend and check that there is a config and only write the BASE_DIR part without changing any configs. From here on configs will be handled by <code>sooadm</code> tool or the webUI (console).
+There are 2 configs in that context</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-text" data-lang="text"># Server properties
+SERVER_URL=http://${HOSTNAME}:${PORT0}
+DEPLOYMENT_URI=/openam
+BASE_DIR=/tmp/openam
+locale=en_US
+PLATFORM_LOCALE=en_US
+AM_ENC_KEY='some_random_string'
+ADMIN_PWD='a_good_pass'
+AMLDAPUSERPASSWD='another_good_pass'
+COOKIE_DOMAIN=.example.com
+ACCEPT_LICENSES=true
+# External configuration data store
+DATA_STORE=dirServer <i class="conum" data-value="1"></i><b>(1)</b>
+DIRECTORY_SSL=SIMPLE
+DIRECTORY_SERVER=${OPENDJ_SERVER}
+DIRECTORY_PORT=${OPENDJ_PORT}
+DIRECTORY_ADMIN_PORT=${OPENDJ_ADMIN_PORT}
+ROOT_SUFFIX=$OPENAM_SUFFIX
+DS_DIRMGRDN=${OPENDJ_USER}
+DS_DIRMGRPASSWD=${OPENDJ_PASS}
+# External User store
+USERSTORE_TYPE=LDAPv3ForOpenDS
+USERSTORE_SSL=SIMPLE
+USERSTORE_HOST=${OPENDJ_SERVER}
+USERSTORE_PORT=${OPENDJ_PORT}
+USERSTORE_SUFFIX=ou=people,dc=example, dc=com
+USERSTORE_MGRDN=${OPENDJ_USER}
+USERSTORE_PASSWD=${OPENDJ_PASS}
+# Site config
+LB_SITE_NAME=example
+LB_PRIMARY_URL=http://sso.example.com:80/openam
+LB_SESSION_HA_SFO=true <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Storing config in openDJ</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>enable session failover</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+There is a whole <a href="https://backstage.forgerock.com/#!/docs/openam/12.0.0/install-guide#prepare-configuration-store">section</a> in the docs on how to prepare the external backend for openAM to use it, make sure to follow it correctly
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_clustering">2. Clustering</h3>
+<div class="paragraph">
+<p>Clustering in openAM is a topic that i did not dive deep into, but a few points to note.<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Every server registers to the cluster with its <code>hostname:port</code></p>
+</li>
+<li>
+<p>When a server is down it does not leave the cluster or get deleted</p>
+</li>
+<li>
+<p>Sessions are stored in memory on the host, so server down = session lost</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_2_1_cts_centralized_session_store">2.1. CTS (centralized session store)</h4>
+<div class="paragraph">
+<p>CTS is the means for openAM to be able to share its sessions among the hosts of the cluster.<br>
+It can use openDJ to store its sessions, hence allowing a user authenticated on one host to be able to resume on another server.<br>
+This is the most important part of the setup</p>
+</div>
+<div class="ulist">
+<div class="title">It solves 2 problems</div>
+<ul>
+<li>
+<p>session sharing</p>
+</li>
+<li>
+<p>and session persistence across reboots</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This is again well documented in the <a href="https://backstage.forgerock.com/#!/docs/openam/12.0.0/install-guide#chap-cts">docs</a>, and pay special attention to the preparations on the openDJ side.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_2_scaling">2.2. Scaling</h4>
+<div class="paragraph">
+<p>As mentioned before, openAM does not clean its list of hosts in the cluster and as mesos would launch each time a new instance, the need to clean old instances becomes evident.<br>
+There are 2 solutions for that, either in the script that launches openam we catch TERM signals and remove the exiting host form the cluster (which is not so easy), or take a hacky way to ensure instances always have the same name.+
+Here is how I achieved that.<br>
+This is the JSON file to launch on marathon.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-jon" data-lang="jon">{
+  "id": "openam",
+  "cmd":"mkdir jetty &amp;&amp; tar xzf jetty-9.3.3.v20150827.tar.gz -C jetty --strip-components=1 &amp;&amp; mv openam-server-12.0.0-criteo-15.war /tmp/openam.war &amp;&amp; mkdir openam-configurator &amp;&amp; unzip openam-configurator-12.0.0.zip -d openam-configurator &amp;&amp; bash -x startup.sh",
+  "cpus": 2,
+  "mem": 1024,
+  "env": {
+    "OPENDJ_SERVER":"opendj.example.com",
+    "OPENDJ_USER":"cn=admin",
+    "OPENDJ_PASS":"password",
+    "OPENAM_SUFFIX":"dc=openam,dc=example,dc=com",
+    "JAVA_HOME": "/usr/lib/jvm/jre-1.8.0/bin"
+  },
+  "instances": 2,
+  "ports": [
+    33333 <i class="conum" data-value="1"></i><b>(1)</b>
+  ]
+  "requirePorts": true, <i class="conum" data-value="2"></i><b>(2)</b>
+  "constraints":[
+    ["hostname","LIKE","slave0[1,2]"] <i class="conum" data-value="3"></i><b>(3)</b>
+  ],
+  "healthChecks": [{
+    "path": "/auth/isAlive.jsp",
+    "protocol": "HTTP",
+    "portIndex": 0,
+    "gracePeriodSeconds": 300,
+    "intervalSeconds": 60,
+    "timeoutSeconds": 20,
+    "maxConsecutiveFailures": 3,
+    "ignoreHttp1xx": false
+  }],
+  "uris": [
+    "http://fileserver.example.com/openam-configurator-12.0.0.zip",
+    "http://fileserver.example.com/jetty.tar.gz",
+    "http://fileserver.example.com/openam.war",
+    "http://fileserver.example.com/startup.sh"
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Specify the port number</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Enforces the port number defined in <strong>1</strong></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Limits the pool to 2 slaves</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This way we always have 2 servers slave01:33333 and slave02:33333</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_starting">3. Starting</h4>
+<div class="paragraph">
+<p>Now that opeAM needs to run its config everytime it starts I use the <code>startup.sh</code> for that.<br>
+<code>startup.sh</code> is a bash script that start openam on jetty and sends it to background, waits for it to be fully started by looking at the log file for <code>Server:main: Started</code>, then it will launch the openam-configurator tool to configure openAM.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell"># Start jetty
+cd $JETTY_HOME
+${JAVA_HOME}/java  -server -jar start.jar -Djetty.http.port=${PORT0} ${JAVA_OPTS}&gt; /tmp/openam.log 2&gt;&amp;1 &amp;
+until [ "$(grep -q 'Server:main: Started @' /tmp/openam.log &amp;&amp; echo $?)" == "0" ]
+ do
+  sleep 5
+done
+cd ../</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then after that it writes the config file above and runs the configurator</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">${JAVA_HOME}/java -jar openam-configurator/openam-configurator-tool-12.0.0.jar -f /tmp/openam.conf
+#run again to work around a bug solved in 12.0.1 but we have 12.0.0
+if [ "$?" != "0" ]; then
+  ${JAVA_HOME}/java -jar openam-configurator/openam-configurator-tool-12.0.0.jar -f /tmp/openam.conf
+  [ "$?" != "0" ] &amp;&amp; exit 1
+fi</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>then at the end let the script simulate a daemon</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">while true; do sleep 60; done</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This way the script remains running and mesos keeps the task, I don&#8217;t worry about the terminating it correctly when mesos is attempting to kill the task as mesos will send a TERM to all tasks in that that container anyway.</p>
+</div>
+<div class="paragraph">
+<p>Now openAM is ready.</p>
+</div>
+<div class="paragraph">
+<p>Next step is to configure your SSO solution</p>
+</div>
+</div>
+</div>
+</div>
+</div>]]></description><link>https://informatiq.github.io/2016/03/28/Deploying-open-A-M-12-on-mesos.html</link><guid isPermaLink="true">https://informatiq.github.io/2016/03/28/Deploying-open-A-M-12-on-mesos.html</guid><category><![CDATA[linux]]></category><category><![CDATA[ mesos]]></category><category><![CDATA[ marathon]]></category><category><![CDATA[ openam]]></category><category><![CDATA[ forgerock]]></category><dc:creator><![CDATA[Ramez Hanna]]></dc:creator><pubDate>Mon, 28 Mar 2016 00:00:00 GMT</pubDate></item></channel></rss>
