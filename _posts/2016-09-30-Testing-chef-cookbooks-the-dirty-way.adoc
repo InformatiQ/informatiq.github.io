@@ -1,4 +1,16 @@
 :hp-tags: linux, chef, dirty, tricks
 = Testing chef cookbooks the dirty way
 
-## Background
+I work with chef on a weekly basis and a lot of times i need to do modify cookbooks that already run well. 
+Good practices say you must test your code first, so I do that. But kitchen is sooo slooowww.
+sometines i just can't tolerate it. And other times you hit a bug and you are not sure why it works in kitchen but fails on the server. In those cases you want to be able to test faster the changes you are doing.
+Hence I use this dirty way to test my cookbook changes
+
+Say I a modify the recipe 'config.rb' of cookbook 'service'. here is what i do 
+``` 
+cd /var/chef/cache/
+# modify the recipe in the cache
+# runc chef client from cache
+chef-client --once --local-mode -o service::config 
+```
+TADA you run modified code on the server.
