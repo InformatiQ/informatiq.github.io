@@ -1,0 +1,4 @@
+:hp-tags: linux, chef, dirty, tricks
+= Testing chef cookbooks the dirty way
+
+## Background
