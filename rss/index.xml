@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[InformatiQ]]></title><description><![CDATA[Nubi's path to Foo]]></description><link>https://informatiq.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 27 Sep 2016 08:35:29 GMT</lastBuildDate><atom:link href="https://informatiq.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Deploying openAM 12 on mesos]]></title><description><![CDATA[<div class="sect1">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[InformatiQ]]></title><description><![CDATA[Nubi's path to Foo]]></description><link>https://informatiq.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 07:36:15 GMT</lastBuildDate><atom:link href="https://informatiq.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Testing chef cookbooks the dirty way]]></title><description><![CDATA[<div class="paragraph">
+<p>I work with chef on a weekly basis and a lot of times i need to do modify cookbooks that already run well.
+Good practices say you must test your code first, so I do that. But kitchen is sooo slooowww.
+sometines i just can&#8217;t tolerate it. And other times you hit a bug and you are not sure why it works in kitchen but fails on the server. In those cases you want to be able to test faster the changes you are doing.
+Hence I use this dirty way to test my cookbook changes</p>
+</div>
+<div class="paragraph">
+<p>Say I a modify the recipe 'config.rb' of cookbook 'service'. here is what i do</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>cd /var/chef/cache/
+# modify the recipe in the cache
+# runc chef client from cache
+chef-client --once --local-mode -o service::config</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>TADA you run modified code on the server.</p>
+</div>]]></description><link>https://informatiq.github.io/2016/09/30/Testing-chef-cookbooks-the-dirty-way.html</link><guid isPermaLink="true">https://informatiq.github.io/2016/09/30/Testing-chef-cookbooks-the-dirty-way.html</guid><category><![CDATA[linux]]></category><category><![CDATA[ chef]]></category><category><![CDATA[ dirty]]></category><category><![CDATA[ tricks]]></category><dc:creator><![CDATA[Ramez Hanna]]></dc:creator><pubDate>Fri, 30 Sep 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Deploying openAM 12 on mesos]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_background">Background</h2>
 <div class="sectionbody">
 <div class="paragraph">
