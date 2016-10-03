@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[InformatiQ]]></title><description><![CDATA[Nubi's path to Foo]]></description><link>https://informatiq.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 30 Sep 2016 07:36:15 GMT</lastBuildDate><atom:link href="https://informatiq.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Testing chef cookbooks the dirty way]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[InformatiQ]]></title><description><![CDATA[Nubi's path to Foo]]></description><link>https://informatiq.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 03 Oct 2016 12:45:15 GMT</lastBuildDate><atom:link href="https://informatiq.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[lid-close enlightenment 0.20 fedora]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>A problem that has been anying me for a while now, Enlightenment 0.20 on fedora cannot detect the lid-close event and hence lid-close does not do anything.
+What I want is on lid-close blank and lock screen, this serves as a quick screen lock and also save battery.
+== why it doesn&#8217;t work
+fedora does not install and enable/start acpid by default. without acpid enlightenment does not know about power events.
+in Fedora systemd is the system that handles those and sends notifs to the DM, while other DMs like gnome know how to handle systemd events, enlightenment does not</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_solution">solution</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>install and enable acpid</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">[user~]\&gt;$ dnf install acpid
+[user~]\&gt;$ systemctl start acpid
+[user~]\&gt;$ systemdctl enable acpid</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>reload enlightenment using the <code>ctrl-alt-end</code> now it should be able to detect lid-close events. from the <code>acpi bindings</code> settings pabne set the desired action</p>
+</div>
+<div class="paragraph">
+<p>I am still unable to set it to blank the screen.</p>
+</div>
+</div>
+</div>]]></description><link>https://informatiq.github.io/2016/10/03/lid-close-enlightenment-020-fedora.html</link><guid isPermaLink="true">https://informatiq.github.io/2016/10/03/lid-close-enlightenment-020-fedora.html</guid><category><![CDATA[enlightenment]]></category><category><![CDATA[ acpi]]></category><category><![CDATA[ lid-close]]></category><category><![CDATA[ fedora]]></category><dc:creator><![CDATA[Ramez Hanna]]></dc:creator><pubDate>Mon, 03 Oct 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Testing chef cookbooks the dirty way]]></title><description><![CDATA[<div class="paragraph">
 <p>I work with chef on a weekly basis and a lot of times i need to do modify cookbooks that already run well.
 Good practices say you must test your code first, so I do that. But kitchen is sooo slooowww.
 sometines i just can&#8217;t tolerate it. And other times you hit a bug and you are not sure why it works in kitchen but fails on the server. In those cases you want to be able to test faster the changes you are doing.
