@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>lid-close enlightenment 0.20 fedora - InformatiQ</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="lid-close enlightenment 0.20 fedora">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="lid-close enlightenment 0.20 fedora">
+    <meta property="og:description" content="">
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="//informatiq.github.io/themes/uno/assets/css/uno.css?v=1475498715076" />
+
+    <link rel="canonical" href="https://informatiq.github.io/2016/10/03/lid-close-enlightenment-020-fedora.html" />
+    <meta name="referrer" content="origin" />
+    
+    <meta property="og:site_name" content="InformatiQ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="lid-close enlightenment 0.20 fedora" />
+    <meta property="og:description" content="A problem that has been anying me for a while now, Enlightenment 0.20 on fedora cannot detect the lid-close event and hence lid-close does not do anything. What I want is on lid-close blank and lock screen, this serves as a quick screen lock and also save battery. &#x3D;&#x3D; why" />
+    <meta property="og:url" content="https://informatiq.github.io/2016/10/03/lid-close-enlightenment-020-fedora.html" />
+    <meta property="article:tag" content="enlightenment" />
+    <meta property="article:tag" content=" acpi" />
+    <meta property="article:tag" content=" lid-close" />
+    <meta property="article:tag" content=" fedora" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="lid-close enlightenment 0.20 fedora" />
+    <meta name="twitter:description" content="A problem that has been anying me for a while now, Enlightenment 0.20 on fedora cannot detect the lid-close event and hence lid-close does not do anything. What I want is on lid-close blank and lock screen, this serves as a quick screen lock and also save battery. &#x3D;&#x3D; why" />
+    <meta name="twitter:url" content="https://informatiq.github.io/2016/10/03/lid-close-enlightenment-020-fedora.html" />
+    
+    <script type="application/ld+json">
+null
+    </script>
+
+    <meta name="generator" content="HubPress" />
+    <link rel="alternate" type="application/rss+xml" title="InformatiQ" href="https://informatiq.github.io/rss/" />
+
+</head>
+<body class="post-template tag-enlightenment tag-acpi tag-lid-close tag-fedora no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed " >
+      <div class="panel-main">
+    
+        <div class="panel-main__inner panel-inverted">
+        <div class="panel-main__content">
+    
+            <h1 class="panel-cover__title panel-title"><a href="https://informatiq.github.io" title="link to homepage for InformatiQ">InformatiQ</a></h1>
+            <hr class="panel-cover__divider" />
+            <p class="panel-cover__description">Nubi&#x27;s path to Foo</p>
+            <hr class="panel-cover__divider panel-cover__divider--secondary" />
+    
+            <div class="navigation-wrapper">
+    
+              <nav class="cover-navigation cover-navigation--primary">
+                <ul class="navigation">
+                  <li class="navigation__item"><a href="https://informatiq.github.io/#blog" title="link to InformatiQ blog" class="blog-button">Blog</a></li>
+                </ul>
+              </nav>
+    
+              
+              
+              <nav class="cover-navigation navigation--social">
+                <ul class="navigation">
+              
+              
+                  <!-- Twitter -->
+                  <li class="navigation__item">
+                    <a href="https://twitter.com/InformatiQ" title="Twitter account">
+                      <i class='icon icon-social-twitter'></i>
+                      <span class="label">Twitter</span>
+                    </a>
+                  </li>
+              
+              
+                  <!-- Github -->
+                  <li class="navigation__item">
+                    <a href="https://github.com/InformatiQ" title="Github account">
+                      <i class='icon icon-social-github'></i>
+                      <span class="label">Github</span>
+                    </a>
+                  </li>
+                  </li>
+              
+              
+              
+              
+                  <!-- LinkedIn -->
+                  <li class="navigation__item">
+                    <a href="    https://fr.linkedin.com/in/ramezhanna" title="LinkedIn account">
+                      <i class='icon icon-social-linkedin'></i>
+                      <span class="label">LinkedIn</span>
+                    </a>
+                  </li>
+              
+                  <!-- Email -->
+                  <li class="navigation__item">
+                    <a href="mailto:rhanna@informatiq.org" title="Email rhanna@informatiq.org">
+                      <i class='icon icon-mail'></i>
+                      <span class="label">Email</span>
+                    </a>
+                  </li>
+              
+                </ul>
+              </nav>
+              
+    
+            </div>
+    
+          </div>
+    
+        </div>
+    
+        <div class="panel-cover--overlay"></div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="03 Oct 2016" class="post-meta__date date">03 Oct 2016</time> &#8226; <span class="post-meta__tags tags">on <a href="https://informatiq.github.io/tag/enlightenment/">enlightenment</a>, <a href="https://informatiq.github.io/tag/acpi/"> acpi</a>, <a href="https://informatiq.github.io/tag/lid-close/"> lid-close</a>, <a href="https://informatiq.github.io/tag/fedora/"> fedora</a></span>
+        <span class="post-meta__author author"><img src="https://avatars.githubusercontent.com/u/366467?v&#x3D;3" alt="profile image for Ramez Hanna" class="avatar post-meta__avatar" /> by Ramez Hanna</span>
+      </div>
+      <h1 class="post-title">lid-close enlightenment 0.20 fedora</h1>
+    </header>
+
+    <section class="post tag-enlightenment tag-acpi tag-lid-close tag-fedora">
+      <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>A problem that has been anying me for a while now, Enlightenment 0.20 on fedora cannot detect the lid-close event and hence lid-close does not do anything.
+What I want is on lid-close blank and lock screen, this serves as a quick screen lock and also save battery.
+== why it doesn&#8217;t work
+fedora does not install and enable/start acpid by default. without acpid enlightenment does not know about power events.
+in Fedora systemd is the system that handles those and sends notifs to the DM, while other DMs like gnome know how to handle systemd events, enlightenment does not</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_solution">solution</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>install and enable acpid</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">[user~]\&gt;$ dnf install acpid
+[user~]\&gt;$ systemctl start acpid
+[user~]\&gt;$ systemdctl enable acpid</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>reload enlightenment using the <code>ctrl-alt-end</code> now it should be able to detect lid-close events. from the <code>acpi bindings</code> settings pabne set the desired action</p>
+</div>
+<div class="paragraph">
+<p>I am still unable to set it to blank the screen.</p>
+</div>
+</div>
+</div>
+    </section>
+
+  </article>
+
+
+
+
+            <footer class="footer">
+                <span class="footer__copyright">&copy; 2016. All rights reserved.</span>
+                <span class="footer__copyright"><a href="http://uno.daleanthony.com" title="link to page for Uno Ghost theme">Uno theme</a> by <a href="http://daleanthony.com" title="link to website for Dale-Anthony">Dale-Anthony</a></span>
+                <span class="footer__copyright">Proudly published with <a href="http://hubpress.io" title="link to Hubpress website">Hubpress</a></span>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();
+      </script>
+
+    <script type="text/javascript" src="//informatiq.github.io/themes/uno/assets/js/main.js?v=1475498715076"></script>
+    
+
+</body>
+</html>
