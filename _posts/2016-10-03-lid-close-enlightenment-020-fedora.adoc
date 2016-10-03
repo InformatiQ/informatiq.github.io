@@ -1,0 +1,20 @@
+= lid-close enlightenment 0.20 fedora
+:hp-tags: enlightenment, acpi, lid-close, fedora
+
+A problem that has been anying me for a while now, Enlightenment 0.20 on fedora cannot detect the lid-close event and hence lid-close does not do anything.
+What I want is on lid-close blank and lock screen, this serves as a quick screen lock and also save battery.
+== why it doesn't work
+fedora does not install and enable/start acpid by default. without acpid enlightenment does not know about power events.
+in Fedora systemd is the system that handles those and sends notifs to the DM, while other DMs like gnome know how to handle systemd events, enlightenment does not
+
+== solution
+install and enable acpid
+[source,bash]
+----
+[user~]\>$ dnf install acpid
+[user~]\>$ systemctl start acpid
+[user~]\>$ systemdctl enable acpid
+----
+reload enlightenment using the `ctrl-alt-end ` now it should be able to detect lid-close events. from the `acpi bindings` settings pabne set the desired action
+
+I am still unable to set it to blank the screen.
