@@ -15,6 +15,6 @@ install and enable acpid
 [user~]\>$ systemctl start acpid
 [user~]\>$ systemdctl enable acpid
 ----
-reload enlightenment using the `ctrl-alt-end ` now it should be able to detect lid-close events. from the `acpi bindings` settings pabne set the desired action
+reload enlightenment using the `ctrl-alt-end` now it should be able to detect lid-close events. from the `acpi bindings` settings pabne set the desired action
 
 I am still unable to set it to blank the screen.
