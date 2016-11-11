@@ -6,7 +6,8 @@
   },
   "site": {
     "title": "InformatiQ",
-    "description": "Nubi's path to Foo"
+    "description": "Nubi's path to Foo",
+    "googleAnalytics": "UA-87258232-1"
   },
   "socialnetwork": {
     "email": "rhanna@informatiq.org",
@@ -15,6 +16,6 @@
     "github": "https://github.com/InformatiQ"
   },
   "theme": {
-    "name": "uno"
+    "name": "saga"
   }
 }
