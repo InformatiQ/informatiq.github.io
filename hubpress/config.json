@@ -2,21 +2,33 @@
   "meta": {
     "username": "informatiq",
     "repositoryName": "informatiq.github.io",
-    "branch": "master"
+    "branch": "master",
+    "cname": ""
   },
   "site": {
     "title": "InformatiQ",
     "description": "Nubi's path to Foo",
-    "googleAnalytics": "UA-87258232-1"
+    "googleAnalytics": "UA-87258232-1",
+    "logo": "",
+    "cover": "",
+    "delay": "",
+    "postsPerPage": "",
+    "disqus": ""
   },
   "socialnetwork": {
     "email": "rhanna@informatiq.org",
     "twitter": "https://twitter.com/InformatiQ",
     "linkedin": "    https://fr.linkedin.com/in/ramezhanna",
-    "github": "https://github.com/InformatiQ"
+    "github": "https://github.com/InformatiQ",
+    "facebook": "",
+    "googleplus": "",
+    "instagram": "",
+    "pinterest": "",
+    "flickr": "",
+    "stackoverflow": ""
   },
   "theme": {
-    "name": "ghostium"
+    "name": "casper"
   },
   "urls": {
     "site": "https://informatiq.github.io",
