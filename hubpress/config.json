@@ -28,12 +28,12 @@
     "stackoverflow": ""
   },
   "theme": {
-    "name": "casper"
+    "name": "ichi"
   },
   "urls": {
     "site": "https://informatiq.github.io",
     "hubpress": "https://informatiq.github.io",
-    "theme": "//informatiq.github.io/themes/ghostium",
+    "theme": "//informatiq.github.io/themes/casper",
     "images": "https://informatiq.github.io/images"
   },
   "initialisationConfigComponent": {
