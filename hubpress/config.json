@@ -17,5 +17,21 @@
   },
   "theme": {
     "name": "ghostium"
+  },
+  "urls": {
+    "site": "https://informatiq.github.io",
+    "hubpress": "https://informatiq.github.io",
+    "theme": "//informatiq.github.io/themes/ghostium",
+    "images": "https://informatiq.github.io/images"
+  },
+  "initialisationConfigComponent": {
+    "name": "initialise-configuration",
+    "computed": {},
+    "methods": {},
+    "staticRenderFns": [
+      null,
+      null,
+      null
+    ]
   }
 }
