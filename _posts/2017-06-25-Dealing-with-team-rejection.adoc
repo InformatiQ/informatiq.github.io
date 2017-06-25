@@ -2,11 +2,16 @@
 // See https://hubpress.gitbooks.io/hubpress-knowledgebase/content/ for information about the parameters.
 // :hp-image: /covers/cover.png
 :published_at: 2017-06-25
-:hp-tags: career, professional, behaviour
+:hp-tags: career, culture, team
 :uri-config: https://github.com/asciidoctor/asciidoctor/blob/master/compat/asciidoc.conf
 :uri-fontawesome: http://fortawesome.github.io/Font-Awesome/
 :uri-icon-in: {user}/#inline-icons
 :uri-icon-attrs: {user}/#size-rotate-and-flip
+
+== TLDR
+Team needs to establish healthy relationships between its members based on trust and communications.
+
+---
 
 A few weeks in my new job in Paris after just moving in from Helsinki, my manager tells me in our biweekly 1 on 1 meeting
 
@@ -30,20 +35,32 @@ I decided to act like an adult.
 
 I reserved a 30 minutes slot for each team member (5 excluding my manager) and met with each of them with only 1 question to ask
 
- Why do you feel that you don't want to work with me?
+* Why do you feel that you don't want to work with me?
 
-And the intention of establishing a trust relationship.
+And the intention of establishing a trust relationship. Ready to admit my mistakes and resolve any issues.
 
 After the round of 1on1 meetings, I came to a few reasons
 
-* I do act like a jerk sometimes, specially that i have not worked in a team for a long time.
+* I do act like a jerk sometimes, specially that I have not worked in a team for a long time.
 * I act in a different way than they are used to
 * They don't really know me
 
-The reason that stoodout was about me acting in a different way that they are used to. For example when I approach someone for a question, I don't start by saying hi or anysort of intro, but i do go straight to the question. Another example I don't say good morning to everyone when I arrive in the morning.
-
-These some simple examples but there were other things and they all boil down to lack of communication. +
+The reason that stood out was about me acting in a different way that they are used to. For example when I approach someone for a question, I don't start by saying hi or anysort of intro, but i do go straight to the question. Another example I don't say good morning to everyone when I arrive in the morning. +
 I do say hi when i arrive but i just throw it to the group (UDP way), I prefer to be direct when i talk work. That's just how I am and how i learned to act while living in finland for the past 8 years.
+
+These some simple examples among other things and they all boil down to *lack of communication* and *cultural difference*. +
+
+Now that the *WHY* is known and *communication* established with the team, the rest is easy. Well relatively easy and requires vigilance and hard work. +
+Relationships are not made by meeting once, I had taken the task of making sure I communicate with everyone in the team make sure all potential issues are resolved early and continuous two-way feedback.
+Yes I also had to work on my habits and flaws.
+
+IMHO I don't think I would have resolved the issue by only working on my attitude without openly communicating with my team. I beleive a big part was not about my attitude. How many times have you had a colleague who had annoying traits but yet it did not affect your work relations. 
+
+____
+A team is not afraid of conflicts. The team uses trust and communication to deal with conflicts
+____
+
+
 
 
 
