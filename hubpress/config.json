@@ -28,12 +28,12 @@
     "stackoverflow": ""
   },
   "theme": {
-    "name": "ichi"
+    "name": "roon"
   },
   "urls": {
     "site": "https://informatiq.github.io",
     "hubpress": "https://informatiq.github.io",
-    "theme": "//informatiq.github.io/themes/casper",
+    "theme": "//informatiq.github.io/themes/ichi",
     "images": "https://informatiq.github.io/images"
   },
   "initialisationConfigComponent": {
