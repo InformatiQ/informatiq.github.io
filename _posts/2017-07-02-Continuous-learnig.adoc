@@ -1,0 +1,27 @@
+= Continuous learnig
+// See https://hubpress.gitbooks.io/hubpress-knowledgebase/content/ for information about the parameters.
+// :hp-image: /covers/cover.png
+// :published_at: 2017-07-2
+// :hp-tags: career, people, learning
+
+== TLDR
+Keep learning and practicing all sorts of skills and not just technical. What people call "soft skills" are very important to your career path
+
+'''
+
+There is always artciles and people talking about how in order to be uptodate in our industry, we need so many hours everyday for learning. +
+Keep updated on the new technologies, learn a new language, depth and breadth. +
+I understood and accepted that, and tried to keep up with every new thing around, while deepning my knowldge on the stuff I work on. +
+To keep learning is not particularly easy, it requires a lot of energy and perseverance. With every new tech we learn we get out of our comfort zone.
+
+Every now and then we are confronted with new situations, that challenge us, not technical. All the repository of tech we learned everyday won't help. +
+What have I missed ? +
+Why am I unable to deal with that? +
+It seems to me that I focused my "learning" in one direction and missed all the rest. +
+Some people call them the "soft skills", I call them "skills". +
+Labelling these skills "soft" makes them seem less important, while they are very important and even critical for my career path. +
+Empathy, listening, anger management, self control, pitching, just to name a few. +
+The same practices of learning tech skills apply, you need to learn and practice. If I learn a new language say GOLANG and I don't practice it enough, I will forgrt it or at least i would struggle everytime i try to do anything with GOLANG. The same with empathy or self control, if I don't practice those then I will either not use them when needed or strugle everytime i need them. +
+It will not be easy to practice self control if I only spend my time in my comfort zone. I need to get out and expose myself to new situations, take on new responsibilities/roles, look more at my team and analyze our interactions to find where I could have acted differently. Find the situations/people I try to avoid and actually face those.
+
+
