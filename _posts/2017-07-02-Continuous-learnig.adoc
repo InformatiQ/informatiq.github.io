@@ -1,6 +1,6 @@
 = Continuous Learnig
-// :published_at: 2017-07-2
-// :hp-tags: career, people, learning
+:published_at: 2017-07-2
+:hp-tags: career, people, learning
 
 == TLDR
 Keep learning and practicing all sorts of skills and not just technical. What people call "soft skills" are very important to your career path
