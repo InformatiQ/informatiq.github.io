@@ -28,12 +28,12 @@
     "stackoverflow": ""
   },
   "theme": {
-    "name": "roon"
+    "name": "ghostium"
   },
   "urls": {
     "site": "https://informatiq.github.io",
     "hubpress": "https://informatiq.github.io",
-    "theme": "//informatiq.github.io/themes/uno-zen",
+    "theme": "//informatiq.github.io/themes/roon",
     "images": "https://informatiq.github.io/images"
   },
   "initialisationConfigComponent": {
