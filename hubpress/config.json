@@ -9,7 +9,7 @@
     "title": "InformatiQ",
     "description": "Nubi's path to Foo",
     "googleAnalytics": "UA-87258232-1",
-    "logo": "informatiq_logo.png",
+    "logo": "images/informatiq_logo.png",
     "cover": "",
     "delay": "",
     "postsPerPage": "",
@@ -33,7 +33,7 @@
   "urls": {
     "site": "https://informatiq.github.io",
     "hubpress": "https://informatiq.github.io",
-    "theme": "//informatiq.github.io/themes/uno",
+    "theme": "//informatiq.github.io/themes/uno-zen",
     "images": "https://informatiq.github.io/images"
   },
   "initialisationConfigComponent": {
