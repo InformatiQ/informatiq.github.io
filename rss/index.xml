@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[InformatiQ]]></title><description><![CDATA[Nubi's path to Foo]]></description><link>https://informatiq.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 25 Jun 2017 15:00:49 GMT</lastBuildDate><atom:link href="https://informatiq.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Dealing with team rejection]]></title><description><![CDATA[<div class="sect1">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[InformatiQ]]></title><description><![CDATA[Nubi's path to Foo]]></description><link>https://informatiq.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 03 Jul 2017 07:31:13 GMT</lastBuildDate><atom:link href="https://informatiq.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Continuous Learnig]]></title><description><![CDATA[<div class="sect1">
+<h2 id="_tldr">TLDR</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Keep learning and practicing all sorts of skills and not just technical. What people call "soft skills" are very important to your career path</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>There is always artciles and people talking about how in order to be uptodate in our industry, we need so many hours everyday for learning.<br>
+Keep updated on the new technologies, learn a new language, depth and breadth.<br>
+I understood and accepted that, and tried to keep up with every new thing around, while deepning my knowldge on the stuff I work on.<br>
+To keep learning is not particularly easy, it requires a lot of energy and perseverance. With every new tech we learn we get out of our comfort zone.</p>
+</div>
+<div class="paragraph">
+<p>Every now and then we are confronted with new situations, that challenge us, not technical. All the repository of tech we learned everyday won&#8217;t help.<br>
+What have I missed ?<br>
+Why am I unable to deal with that?<br>
+It seems to me that I focused my "learning" in one direction and missed all the rest.<br>
+Some people call them the "soft skills", I call them "skills".<br>
+Labelling these skills "soft" makes them seem less important, while they are very important and even critical for my career path.<br>
+Empathy, listening, anger management, self control, pitching, just to name a few.<br>
+The same practices of learning tech skills apply, you need to learn and practice.
+If I learn a new language say GOLANG and I don&#8217;t practice it enough, I will forgrt it or at least i would struggle everytime i try to do anything with GOLANG.<br>
+The same with empathy or self control, if I don&#8217;t practice those then I will either not use them when needed or strugle everytime i need them.<br>
+It will not be easy to practice self control if I only spend my time in my comfort zone.
+I need to get out and expose myself to new situations, take on new responsibilities/roles, look more at my team and analyze our interactions to find where I could have acted differently.
+Find the situations/people I try to avoid and actually face those.</p>
+</div>
+</div>
+</div>]]></description><link>https://informatiq.github.io/2017/07/02/Continuous-learnig.html</link><guid isPermaLink="true">https://informatiq.github.io/2017/07/02/Continuous-learnig.html</guid><category><![CDATA[career]]></category><category><![CDATA[people]]></category><category><![CDATA[learning]]></category><dc:creator><![CDATA[Ramez Hanna]]></dc:creator><pubDate>Sun, 02 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Dealing with team rejection]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_tldr">TLDR</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -129,7 +158,7 @@ in Fedora systemd is the system that handles those and sends notifs to the DM, w
 <p>I am still unable to set it to blank the screen.</p>
 </div>
 </div>
-</div>]]></description><link>https://informatiq.github.io/2016/10/03/lid-close-enlightenment-020-fedora.html</link><guid isPermaLink="true">https://informatiq.github.io/2016/10/03/lid-close-enlightenment-020-fedora.html</guid><category><![CDATA[enlightenment]]></category><category><![CDATA[acpi]]></category><category><![CDATA[lid-close]]></category><category><![CDATA[fedora]]></category><dc:creator><![CDATA[Ramez Hanna]]></dc:creator><pubDate>Mon, 03 Oct 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Testing chef cookbooks the dirty way]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://informatiq.github.io/2016/10/03/lid-close-enlightenment-020-fedora.html</link><guid isPermaLink="true">https://informatiq.github.io/2016/10/03/lid-close-enlightenment-020-fedora.html</guid><category><![CDATA[enlightenment]]></category><category><![CDATA[ acpi]]></category><category><![CDATA[ lid-close]]></category><category><![CDATA[ fedora]]></category><dc:creator><![CDATA[Ramez Hanna]]></dc:creator><pubDate>Mon, 03 Oct 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Testing chef cookbooks the dirty way]]></title><description><![CDATA[<div class="paragraph">
 <p>I work with chef on a weekly basis and a lot of times i need to do modify cookbooks that already run well.
 Good practices say you must test your code first, so I do that. But kitchen is sooo slooowww.
 sometines i just can&#8217;t tolerate it. And other times you hit a bug and you are not sure why it works in kitchen but fails on the server. In those cases you want to be able to test faster the changes you are doing.
@@ -148,7 +177,7 @@ chef-client --once --local-mode -o service::config</code></pre>
 </div>
 <div class="paragraph">
 <p>TADA you run modified code on the server.</p>
-</div>]]></description><link>https://informatiq.github.io/2016/09/30/Testing-chef-cookbooks-the-dirty-way.html</link><guid isPermaLink="true">https://informatiq.github.io/2016/09/30/Testing-chef-cookbooks-the-dirty-way.html</guid><category><![CDATA[linux]]></category><category><![CDATA[chef]]></category><category><![CDATA[dirty]]></category><category><![CDATA[tricks]]></category><dc:creator><![CDATA[Ramez Hanna]]></dc:creator><pubDate>Fri, 30 Sep 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Deploying openAM 12 on mesos]]></title><description><![CDATA[<div class="sect1">
+</div>]]></description><link>https://informatiq.github.io/2016/09/30/Testing-chef-cookbooks-the-dirty-way.html</link><guid isPermaLink="true">https://informatiq.github.io/2016/09/30/Testing-chef-cookbooks-the-dirty-way.html</guid><category><![CDATA[linux]]></category><category><![CDATA[ chef]]></category><category><![CDATA[ dirty]]></category><category><![CDATA[ tricks]]></category><dc:creator><![CDATA[Ramez Hanna]]></dc:creator><pubDate>Fri, 30 Sep 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Deploying openAM 12 on mesos]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_background">Background</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -425,4 +454,4 @@ fi</code></pre>
 </div>
 </div>
 </div>
-</div>]]></description><link>https://informatiq.github.io/2016/03/28/Deploying-open-A-M-12-on-mesos.html</link><guid isPermaLink="true">https://informatiq.github.io/2016/03/28/Deploying-open-A-M-12-on-mesos.html</guid><category><![CDATA[linux]]></category><category><![CDATA[mesos]]></category><category><![CDATA[marathon]]></category><category><![CDATA[openam]]></category><category><![CDATA[forgerock]]></category><dc:creator><![CDATA[Ramez Hanna]]></dc:creator><pubDate>Mon, 28 Mar 2016 00:00:00 GMT</pubDate></item></channel></rss>
+</div>]]></description><link>https://informatiq.github.io/2016/03/28/Deploying-open-A-M-12-on-mesos.html</link><guid isPermaLink="true">https://informatiq.github.io/2016/03/28/Deploying-open-A-M-12-on-mesos.html</guid><category><![CDATA[linux]]></category><category><![CDATA[ mesos]]></category><category><![CDATA[ marathon]]></category><category><![CDATA[ openam]]></category><category><![CDATA[ forgerock]]></category><dc:creator><![CDATA[Ramez Hanna]]></dc:creator><pubDate>Mon, 28 Mar 2016 00:00:00 GMT</pubDate></item></channel></rss>
