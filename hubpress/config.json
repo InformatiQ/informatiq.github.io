@@ -33,7 +33,7 @@
   "urls": {
     "site": "https://informatiq.github.io",
     "hubpress": "https://informatiq.github.io",
-    "theme": "//informatiq.github.io/themes/the-shell",
+    "theme": "//informatiq.github.io/themes/uno",
     "images": "https://informatiq.github.io/images"
   },
   "initialisationConfigComponent": {
