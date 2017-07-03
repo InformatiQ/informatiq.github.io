@@ -28,12 +28,12 @@
     "stackoverflow": ""
   },
   "theme": {
-    "name": "the-shell"
+    "name": "uno"
   },
   "urls": {
     "site": "https://informatiq.github.io",
     "hubpress": "https://informatiq.github.io",
-    "theme": "//informatiq.github.io/themes/saga",
+    "theme": "//informatiq.github.io/themes/the-shell",
     "images": "https://informatiq.github.io/images"
   },
   "initialisationConfigComponent": {
