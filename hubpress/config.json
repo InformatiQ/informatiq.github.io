@@ -28,12 +28,12 @@
     "stackoverflow": ""
   },
   "theme": {
-    "name": "ghostium"
+    "name": "casper"
   },
   "urls": {
     "site": "https://informatiq.github.io",
     "hubpress": "https://informatiq.github.io",
-    "theme": "//informatiq.github.io/themes/roon",
+    "theme": "//informatiq.github.io/themes/ghostium",
     "images": "https://informatiq.github.io/images"
   },
   "initialisationConfigComponent": {
