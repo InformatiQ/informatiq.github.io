@@ -32,8 +32,8 @@
   },
   "urls": {
     "site": "https://informatiq.github.io",
-    "hubpress": "https://informatiq.github.io",
-    "theme": "//informatiq.github.io/themes/casper",
+    "hubpress": "http://informatiq.github.io",
+    "theme": "//informatiq.github.io/themes/roon",
     "images": "https://informatiq.github.io/images"
   },
   "initialisationConfigComponent": {
@@ -43,6 +43,10 @@
     "staticRenderFns": [
       null,
       null,
+      null
+    ],
+    "_compiled": true,
+    "beforeCreate": [
       null
     ]
   }
