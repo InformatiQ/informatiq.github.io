@@ -1,0 +1,125 @@
+baseURL: "https://informatiq.github.io"
+languageCode: "en-us"
+title: "Ramez Hanna"
+theme: profile
+
+Paginate: 3
+#disqusShortname: gurusabarish
+#googleAnalytics: G-DWJJVE27WD
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: https://informatiq.medium.com/
+      weight: 1
+
+params:
+  title: "Ramez Hanna"
+  description: Coach and tech leader
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    disableThemeToggle: false
+    defaultTheme: "light" # dark
+  
+  # Site home
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Ramez Hanna."
+    subtitle: "Coach and Tech Leader"
+    content: |-
+      I accompany people through their growth journey. With an integral approach that helps them gain clarity and be mindful of their way of being.
+       
+    image: "/images/hero.jpg"
+    button:
+      enable: true
+      name: "Schedule a call"
+      url: "https://calendly.com/ramez-hanna"
+      download: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/ramezhanna/
+  
+  # Site sections
+  sections:
+    - Name: "Coaching"
+      enable: true
+      title: "Coaching"
+      #image: "/images/me-yellow.jpg"
+      content: |-
+        #### What is it?
+        Coaching is a form of development in which an experienced person, called a coach, supports a learner, called coachee, in achieving a specific personal or professional goal by providing training and guidance.  
+        In simple terms, coaching is an opportunity for the coachee to take the time to work on themselves with the help of a coach.  
+        The coach helps the coachee in gaining clarity on their goals. Be mindful of their current ways. Paint a picture of the destination and support them in getting there.
+
+        #### How does it go?
+        A coaching program has a start and an end.
+        * It starts with the coachee having a topic to work on that is important to them and their development.
+        * A discovery session, in which the coach and the coachee learn a little about each other, break the ice. They will also start to discover the topic. The purpose is for both to get clarity on the topic.
+        * In the next session, the coach will propose a coaching program that is customized to the coachee that runs over several sessions (4-6 months). They will discuss and refine it together.
+          The program will have clear goals and exercises to help the coachee achieve them.
+        * Finally, a closing session to review and celebrate the change.  
+        
+        Yet the journey doesn’t stop there, the coach merely helps the coachee get on the path to achieving their goals.  
+        After the program is over, the work continues and the coachee continues on their journey of growth without the coach.  
+        **Ready to step in? Let’s talk. Schedule an intro call with me.**
+
+    - Name: "Testimonials"
+      enable: false
+      title: "Testimonials"
+      #image: "/images/testimonials.png"
+      cards:
+          - content: "he the most amazing amaze"
+            footer: "anonymous"
+          - content: "so much wow, so much amaze"
+            footer: "anonymous"
+          - content: "he the most amazing amaze"
+            footer: "anonymous"
+    - Name: "Aboutme"
+      enable: true
+      title: "About Me"
+      #image: "/images/me-yello.jpg"
+      content: |-
+        I had a career as an individual contributor in tech. Part of my job was to mentor less experienced engineers.  
+        Later I moved into management, and started managing teams. This time mentoring was a big part of my job, both mentoring engineersd and less experienced managers.  
+        I always found mentoring useful, but for me, I didn't want advice, I was more looking to learn things myslef, finding my way. That's when I learned about coaching.  
+        I started integrating it in my tools as a manager. Quite a powerful tool too.  
+        Coaching others helped me personally get better, and as I am who I am I did coaching in my own way after a lot of reading and experimenting with styles.  
+        Later I had my own coaching experience a s a coachee, and it was an amazing experience. An eye opener.  
+        
+        I have learned by doing, and went for coaching training. I have been able to help managers and engineers with their growth journeys.  
+        This has given me tremendous satisfaction. Coaching is quite rewarding and humbling.  
+        Today I am here to be available for a bigger audience. Schedule a call
+
+
+  #Contact
+  contact:
+    enable: true
+    title: "Contact"
+    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    email: rhanna@informatiq.org
+    btnName: Mail me
+
+  footer:
+    # recentPosts: false
+    socialNetworks:
+      linkedin: https://linkedin.com/in/ramezhanna/
+      twitter: https://twitter.com/informatiq

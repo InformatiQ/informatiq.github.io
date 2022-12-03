@@ -1,0 +1,6 @@
+[submodule "themes/spectral"]
+	path = themes/spectral
+	url = https://github.com/sbruder/spectral.git
+[submodule "themes/profile"]
+	path = themes/profile
+	url = https://github.com/gurusabarish/hugo-profile.git
