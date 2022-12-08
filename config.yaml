@@ -45,7 +45,9 @@ params:
     title: "Ramez Hanna."
     subtitle: "Coach and Tech Leader"
     content: |-
-      I accompany people through their growth journey. With an integral approach that helps them gain clarity and be mindful of their way of being.
+      I works with a person or a team to help them achieve their goals and improve their performance.  
+      I provide support, guidance, and feedback to help the person or team succeed in their development transformation.  
+      All you need is a goal and to be open and ready for change, the rest we will cocreate together.
        
     image: "/images/hero.jpg"
     button:
@@ -65,7 +67,7 @@ params:
       title: "Coaching"
       #image: "/images/me-yellow.jpg"
       content: |-
-        #### What is it?
+        #### What is coaching?
         Coaching is a form of development in which an experienced person, called a coach, supports a learner, called coachee, in achieving a specific personal or professional goal by providing training and guidance.  
         In simple terms, coaching is an opportunity for the coachee to take the time to work on themselves with the help of a coach.  
         The coach helps the coachee in gaining clarity on their goals. Be mindful of their current ways. Paint a picture of the destination and support them in getting there.
@@ -81,6 +83,17 @@ params:
         Yet the journey doesn’t stop there, the coach merely helps the coachee get on the path to achieving their goals.  
         After the program is over, the work continues and the coachee continues on their journey of growth without the coach.  
         **Ready to step in? Let’s talk. Schedule an intro call with me.**
+
+        #### Who is it for?
+        Coaching can be helpful for individuals and teams who want to achieve their goals and improve their performance. It can be useful for people who are looking to make changes in their personal or professional lives, and who want support and guidance in achieving their goals.  
+        Coaching can be useful for people who are looking to develop specific skills or knowledge, such as leadership or communication skills. It can also be helpful for people who are going through significant life transitions, such as a career change or a move to a new city.  
+        Overall, coaching can be beneficial for anyone who wants to achieve personal and professional growth and fulfillment, and who is willing to put in the effort and commitment to make it happen.
+
+        #### What are the requirements?
+        The only requirement is to have  a topic.  
+        A topic can be anything that you want to acheive or improve. It could even be about finidng a goal.  
+        The best way to figure out if you are ready is to do it. Book a free introductory session and let's talk.
+
 
     - Name: "Testimonials"
       enable: false
@@ -108,18 +121,13 @@ params:
         I have learned by doing, and went for coaching training. I have been able to help managers and engineers with their growth journeys.  
         This has given me tremendous satisfaction. Coaching is quite rewarding and humbling.  
         Today I am here to be available for a bigger audience. Schedule a call
-
-
-  #Contact
-  contact:
-    enable: true
-    title: "Contact"
-    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
-    email: rhanna@informatiq.org
-    btnName: Mail me
+    - Name: "Contact"
+      enable: true
+      title: "Contact"
+      content: |-
+        For any questions or inquiries feel free to message me over linkedin or email me at rhanna at informatiq dot org
 
   footer:
     # recentPosts: false
     socialNetworks:
       linkedin: https://linkedin.com/in/ramezhanna/
-      twitter: https://twitter.com/informatiq
