@@ -66,16 +66,16 @@ params:
       enable: true
       title: "You"
       content: |-
-        #### Are you considering your nexr career step, and
-        * management is one of your options?
+        #### Are you considering your next career step, and
+        * Management is one of your options?
         * Not sure where to go from here
 
         **OR**
 
-        #### Are you in an leadership or management role, and
-        * you are new at it and looking for help ramping up
+        #### Are you in a leadership or management role, and
+        * You are new at it and looking for help ramping up
         * Looking to grow into your role and enlarge your impact
-        * You receiuved feedback that you want to work on
+        * You received feedback that you want to work on
         * Questioning what your next step looks like
         * You just want to get better at it
         
@@ -138,15 +138,15 @@ params:
       #image: "/images/me-yello.jpg"
       content: |-
         I had a career as an individual contributor in tech. Part of my job was to mentor less experienced engineers.  
-        Later I moved into management, and started managing teams. This time mentoring was a big part of my job, both mentoring engineersd and less experienced managers.  
+        Later I moved into management, and started managing teams. This time mentoring was a big part of my job, both mentoring engineers and less experienced managers.  
         I always found mentoring useful, but for me, I didn't want advice, I was more looking to learn things myslef, finding my way. That's when I learned about coaching.  
         I started integrating it in my tools as a manager. Quite a powerful tool too.  
         Coaching others helped me personally get better, and as I am who I am I did coaching in my own way after a lot of reading and experimenting with styles.  
-        Later I had my own coaching experience a s a coachee, and it was an amazing experience. An eye opener.  
+        Later I had my own coaching experience as a coachee, and it was an amazing experience. An eye opener.  
         
         I have learned by doing, and went for coaching training. I have been able to help managers and engineers with their growth journeys.  
         This has given me tremendous satisfaction. Coaching is quite rewarding and humbling.  
-        Today I am here to be available for a bigger audience. Schedule a call
+        Today I am here to be available for a bigger audience. [Schedule a call](https://calendly.com/ramez-hanna)
     - Name: "Contact"
       enable: true
       title: "Contact"
