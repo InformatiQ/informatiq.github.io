@@ -5,7 +5,7 @@ theme: profile-ng
 
 Paginate: 3
 #disqusShortname: gurusabarish
-#googleAnalytics: G-DWJJVE27WD
+googleAnalytics: G-BXQC8S5W8Y 
 
 markup:
   goldmark:
