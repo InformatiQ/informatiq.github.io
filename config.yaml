@@ -45,7 +45,7 @@ params:
     title: "Ramez Hanna."
     subtitle: "Coach and Tech Leader"
     content: |-
-      I works with a person or a team to help them achieve their goals and improve their performance.  
+      I work with a people to help them achieve their goals and improve their performance.  
       I provide support, guidance, and feedback to help the person or team succeed in their development transformation.  
       All you need is a goal and to be open and ready for change, the rest we will cocreate together.
        
@@ -62,6 +62,31 @@ params:
   
   # Site sections
   sections:
+    - Name: "You"
+      enable: true
+      title: "You"
+      content: |-
+        #### Are you considering your nexr career step, and
+        * management is one of your options?
+        * Not sure where to go from here
+
+        **OR**
+
+        #### Are you in an leadership or management role, and
+        * you are new at it and looking for help ramping up
+        * Looking to grow into your role and enlarge your impact
+        * You receiuved feedback that you want to work on
+        * Questioning what your next step looks like
+        * You just want to get better at it
+        
+        **OR** 
+
+        #### Are you, as a person
+        * Finding it hard to get through a sitaution
+        * Wanting to grow but unable to make long lasting impact
+
+        If you relate to any of the above, [Schedule an intro call](https://calendly.com/ramez-hanna) with me to see how coaching can help you 
+
     - Name: "Coaching"
       enable: true
       title: "Coaching"
