@@ -5,7 +5,7 @@ theme: profile-ng
 
 Paginate: 3
 #disqusShortname: gurusabarish
-googleAnalytics: G-BXQC8S5W8Y 
+googleAnalytics: UA-87258232-1 
 
 markup:
   goldmark:
@@ -43,11 +43,11 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Ramez Hanna."
-    subtitle: "Coach and Tech Leader"
+    subtitle: "Leadership Coach"
     content: |-
-      I work with people to help them achieve their goals and improve their performance.  
-      You get the support, guidance, and feedback needed help you in you growth journey.
-      All you need is a goal and to be open for change, the rest we will co-create together.
+      I work with aspiring leaders to help them achieve their goals and improve their performance.
+      Having spent 20+ years in tech and 9 years in leadership roles, I am well suited to work with engineering managers. 
+      Whether you are taking the first steps or experienced and looking to unlock your potential.
        
     image: "/images/hero.jpg"
     button:
