@@ -75,6 +75,13 @@ header .navbar.animate {
     min-height: 100vh;
     line-height: 2rem;
     max-width: 100%;
+    background-image: url("/images/hero-bg.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: peachpuff;
+    background-blend-mode: screen;
 }
 #hero .content.animate {
     animation: fade-left 1s ease-out;
@@ -115,6 +122,7 @@ header .navbar.animate {
     border: 0;
     border: 2px solid var(--secondary-color);
     border-radius: 1rem;
+    max-width: 150%;
 }
 
 #hero .image.animate img {
@@ -195,7 +203,15 @@ header .navbar.animate {
     width: 100%;
 }
 
+/* generic */
 
+.generic:nth-of-type(odd) {
+    background-color:#FFFFFF;
+}
+    
+.generic:nth-of-type(even) {
+    background-color:#ffb347;
+}
 
 /* about me */
 #about h3 {
