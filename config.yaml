@@ -12,6 +12,7 @@ markup:
     renderer:
       unsafe: true
 
+enableEmoji: True
 Menus:
   main:
     - identifier: blog
@@ -43,10 +44,12 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Ramez Hanna."
-    subtitle: "Leadership Coach"
+    subtitle: |-
+      Leadership Coach 
+
     content: |-
       I work with aspiring leaders to help them achieve their goals and improve their performance.
-      Having spent 20+ years in tech and 9 years in leadership roles, I am well suited to work with engineering managers. 
+      Having spent 20+ years in tech working across different countries and cultures, I am well suited to work with engineering leaders around the world.
       Whether you are taking the first steps or experienced and looking to unlock your potential.
        
     image: "/images/hero.jpg"
