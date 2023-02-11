@@ -13,6 +13,7 @@ markup:
       unsafe: true
 
 enableEmoji: True
+
 Menus:
   main:
     - identifier: blog
@@ -36,7 +37,7 @@ params:
   animate: true
 
   theme:
-    disableThemeToggle: false
+    disableThemeToggle: True
     defaultTheme: "light" # dark
   
   # Site home
