@@ -53,7 +53,7 @@ params:
       Having spent 20+ years in tech working across different countries and cultures, I am well suited to work with engineering leaders around the world.
       Whether you are taking the first steps or experienced and looking to unlock your potential.
        
-    image: "/images/hero.jpg"
+    image: "/images/hero-me.jpg"
     button:
       enable: true
       name: "Schedule a call"
@@ -68,7 +68,8 @@ params:
   sections:
     - Name: "You"
       enable: true
-      title: "You"
+      title: "About You"
+      image: "/images/you.png"
       content: |-
         #### Are you considering your next career step, and
         * Management is one of your options?
@@ -94,12 +95,14 @@ params:
     - Name: "Coaching"
       enable: true
       title: "Coaching"
-      #image: "/images/me-yellow.jpg"
+      image: "/images/butterfly-transform.png"
       content: |-
         #### What is coaching?
         Coaching is a form of development in which an experienced person, called a coach, supports a learner, called coachee, in achieving a specific personal or professional goal by providing training and guidance.  
         In simple terms, coaching is an opportunity for the coachee to take the time to work on themselves with the help of a coach.  
         The coach helps the coachee in gaining clarity on their goals. Be mindful of their current ways. Paint a picture of the destination and support them in getting there.
+
+        <img src="/images/coaching-diag.png" width="100%">
 
         #### How does it go?
         A coaching program has a start and an end.
@@ -158,6 +161,6 @@ params:
         For any questions or inquiries feel free to message me over linkedin or email me at rhanna at informatiq dot org
 
   footer:
-    # recentPosts: false
+    recentPosts: false
     socialNetworks:
-      linkedin: https://linkedin.com/in/ramezhanna/
+      #linkedin: https://linkedin.com/in/ramezhanna/
