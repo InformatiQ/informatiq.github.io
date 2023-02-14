@@ -12,6 +12,9 @@ body {
 /* primary font */
 .primary-font, #primary-font {
     font-family: "Alata", sans-serif;
+    line-height: 2rem;
+    opacity: 0.8;
+    font-size: 1.2rem;
 }
 
 /* Default font */

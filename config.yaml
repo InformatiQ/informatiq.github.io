@@ -49,15 +49,16 @@ params:
       Leadership Coach 
 
     content: |-
-      I work with aspiring leaders to help them achieve their goals and improve their performance.
-      Having spent 20+ years in tech working across different countries and cultures, I am well suited to work with engineering leaders around the world.
-      Whether you are taking the first steps or experienced and looking to unlock your potential.
+      I work with aspiring leaders to help them achieve their goals and improve their performance.  
+      Having spent 20+ years in tech working across different countries and cultures, I am well suited to work with engineering leaders around the world.  
+      
+      Whether you are an experienced leader looking to unlock your potential or taking your first leadership steps, coaching will help you get clarity and push in the right direction.
        
     image: "/images/hero-me.jpg"
     button:
       enable: true
       name: "Schedule a call"
-      url: "https://calendly.com/ramez-hanna"
+      url: "https://calendly.com/ramez-hanna/45-minute-meeting"
       download: false
     socialLinks:
       fontAwesomeIcons:
@@ -72,25 +73,25 @@ params:
       image: "/images/you.png"
       content: |-
         #### Are you considering your next career step, and
-        * Management is one of your options?
-        * Not sure where to go from here
+        * Management is one of your options.
+        * You are not sure where to go from here.
 
         **OR**
 
-        #### Are you in a leadership or management role, and
-        * You are new at it and looking for help ramping up
-        * Looking to grow into your role and enlarge your impact
-        * You received feedback that you want to work on
-        * Questioning what your next step looks like
-        * You just want to get better at it
+        #### You are in a leadership or management role, and
+        * You are new at it and looking for help ramping up.
+        * You are looking to grow into the role and enlarge your impact.
+        * You received feedback that you want to work on.
+        * You are questioning what your next step looks like.
+        * You just want to get better at it.
         
         **OR** 
 
         #### Are you, as a person
-        * Finding it hard to get through a sitaution
-        * Wanting to grow but unable to make long lasting impact
+        * Finding it hard to get through a certain sitaution?
+        * Wanting to grow but unable to make a long-lasting impact.
 
-        If you relate to any of the above, <a href="#" data-bs-toggle="modal" data-bs-target="#bookme">Book a free call</a> with me to see how coaching can help you 
+        If you relate to any of the above, <a href="#" data-bs-toggle="modal" data-bs-target="#bookme">book a free call</a> with me to see how coaching can help you 
 
     - Name: "Coaching"
       enable: true
@@ -98,7 +99,7 @@ params:
       image: "/images/butterfly-transform.png"
       content: |-
         #### What is coaching?
-        Coaching is a form of development in which an experienced person, called a coach, supports a learner, called coachee, in achieving a specific personal or professional goal by providing training and guidance.  
+        Coaching is a form of development in which an experienced person, called a coach, supports a learner, called a coachee, in achieving a specific personal or professional goal by providing training and guidance.  
         In simple terms, coaching is an opportunity for the coachee to take the time to work on themselves with the help of a coach.  
         The coach helps the coachee in gaining clarity on their goals. Be mindful of their current ways. Paint a picture of the destination and support them in getting there.
 
@@ -110,21 +111,23 @@ params:
         * A discovery session, in which the coach and the coachee learn a little about each other, break the ice. They will also start to discover the topic. The purpose is for both to get clarity on the topic.
         * In the next session, the coach will propose a coaching program that is customized to the coachee that runs over several sessions (4-6 months). They will discuss and refine it together.
           The program will have clear goals and exercises to help the coachee achieve them.
-        * Finally, a closing session to review and celebrate the change.  
+        * Finally, there is a closing session to review and celebrate the change.  
         
         Yet the journey doesn’t stop there, the coach merely helps the coachee get on the path to achieving their goals.  
-        After the program is over, the work continues and the coachee continues on their journey of growth without the coach.  
+        After the program is over, the work goes on and the coachee continues on their journey of growth without the coach.  
         **Ready to step in? Let’s talk. <a href="#" data-bs-toggle="modal" data-bs-target="#bookme">Book a free call</a> with me.**
 
         #### Who is it for?
-        Coaching can be helpful for individuals and teams who want to achieve their goals and improve their performance. It can be useful for people who are looking to make changes in their personal or professional lives, and who want support and guidance in achieving their goals.  
-        Coaching can be useful for people who are looking to develop specific skills or knowledge, such as leadership or communication skills. It can also be helpful for people who are going through significant life transitions, such as a career change or a move to a new city.  
+        Coaching can be helpful for individuals and teams who want to achieve their goals and improve their performance.
+        It can be useful for people looking to make changes in their personal or professional lives, and who want support and guidance in achieving their goals.   
+        Coaching can be useful for people looking to develop specific skills or knowledge, such as leadership or communication skills. It can also be helpful for people who are going through significant life transitions, such as a career change or a move to a new city.  
+        
         Overall, coaching can be beneficial for anyone who wants to achieve personal and professional growth and fulfillment, and who is willing to put in the effort and commitment to make it happen.  
-        **Not sure if that is for you? <a href="#" data-bs-toggle="modal" data-bs-target="#bookme">Book a free call</a>**
+        **Not sure if that is for you? <a href="#" data-bs-toggle="modal" data-bs-target="#bookme">Book a free intro call</a> and we can walk through options.**
 
         #### What are the requirements?
-        The only requirement is to have  a topic.  
-        A topic can be anything that you want to acheive or improve. It could even be about finidng a goal.  
+        The only requirement is to have a topic.  
+        A topic can be anything that you want to achieve or improve. It could even be about finding a goal.  
         **The best way to figure out if you are ready is to do it. <a href="#" data-bs-toggle="modal" data-bs-target="#bookme">Book a free call</a> with me and let's talk.**
 
 
@@ -146,19 +149,19 @@ params:
       content: |-
         I had a career as an individual contributor in tech. Part of my job was to mentor less experienced engineers.  
         Later I moved into management, and started managing teams. This time mentoring was a big part of my job, both mentoring engineers and less experienced managers.  
-        I always found mentoring useful, but for me, I didn't want advice, I was more looking to learn things myslef, finding my way. That's when I learned about coaching.  
-        I started integrating it in my tools as a manager. Quite a powerful tool too.  
-        Coaching others helped me personally get better, and as I am who I am I did coaching in my own way after a lot of reading and experimenting with styles.  
-        Later I had my own coaching experience as a coachee, and it was an amazing experience. An eye opener.  
+        I always found mentoring useful, but for me, I didn't want advice, I was more looking to learn things myself, finding my way. That's when I learned about coaching.  
         
-        I have learned by doing, and went for coaching training. I have been able to help managers and engineers with their growth journeys.  
-        This has given me tremendous satisfaction. Coaching is quite rewarding and humbling.  
-        Today I am here to be available for a bigger audience. <a href="#" data-bs-toggle="modal" data-bs-target="#bookme">Book a free call</a>
+        I started integrating it into my tools as a manager. Quite a powerful tool too.  
+        Coaching others helped me personally get better, and as I am who I am I did coaching in my own way after a lot of reading and experimenting with styles.  
+        Later I had my own coaching experience as a coacheewhich was amazing experience. An eye-opener.  
+        
+        I have learned by doing, and went for coaching training. I have been able to help managers and engineers with their growth journeys and this has given me tremendous satisfaction. Coaching is quite rewarding and humbling.  
+        Today I am here to be available for a bigger audience. <a href="#" data-bs-toggle="modal" data-bs-target="#bookme">Book a free call</a>, let's talk.
     - Name: "Contact"
       enable: true
       title: "Contact"
       content: |-
-        For any questions or inquiries feel free to message me over linkedin or email me at rhanna at informatiq dot org
+        For any questions or inquiries feel free to message me over [LinkedIn](https://www.linkedin.com/in/ramezhanna/) or email me at rhanna at informatiq dot org
 
   footer:
     recentPosts: false
