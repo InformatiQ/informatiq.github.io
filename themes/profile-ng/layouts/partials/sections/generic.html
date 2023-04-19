@@ -2,7 +2,8 @@
 {{ if .enable | default false }}
 <section id="{{.Name}}" class="py-0 py-sm-5 generic">
 	<div class="container bg-transparent">
-		<h2 class="text-center bg-transparent" style="margin-top: 50px; font-family: 'Alata', sans-serif;">{{ .title }}</h3>
+		<h2 class="text-center bg-transparent" style="margin-top: 50px; font-family: 'Alata', sans-serif;">{{ .title }}
+			</h3>
 			<div class="bg-transparent row justify-content-center px-3 py-5">
 				{{ if .image }}
 				<div class="col-sm-12 col-md-8 col-lg-4 mb-5 mb-sm-0 mb-md-5 mb-lg-0 d-none d-sm-none d-md-block">
@@ -11,30 +12,26 @@
 					</div>
 				</div>
 				{{ end }}
-				<div class="col-sm-12 col-md-12 col-lg-8 content primary-font">
+				<div class="col-sm-12 col-md-12 col-lg-8 content primary-font justify-content-center">
 					{{ .content | markdownify }}
 				</div>
 				{{ if .cards }}
-				<section>
-					<div class="container">
-						<div class="px-0 px-md-5 px-lg-5">
-							<div class="row justify-content-center px-3 px-md-5 px-lg-5">
-								{{ range .cards }}
-								<div class="col-lg-4 col-md-6 my-3">
-									<div class="card my-3 h-100 p-3" title="{{ .footer }}">
-										<div class="card-body bg-transparent">
-											<div class="card-text secondary-font">
-												{{ .content }}
-											</div>
-											<p class="card-title bg-transparent" align="right">{{ .footer }}</p>
-										</div>
-									</div>
+				<div class="row justify-content-center px-3 px-md-5 px-lg-5">
+					{{ range .cards }}
+					<div class="col-lg-4 col-sm-9 my-1 primary-font">
+						<div class="card" title="{{ .footer }}">
+							<div class="card-body bg-transparent">
+								<div class="card-text secondary-font">
+									{{ .content }}
 								</div>
-								{{ end }}
+							</div>
+							<div class="card-footer justify-content-right text-end">
+								<b>{{ .footer }}</b>
 							</div>
 						</div>
 					</div>
-				</section>
+					{{ end }}
+				</div>
 				{{ end }}
 			</div>
 	</div>

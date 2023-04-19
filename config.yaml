@@ -132,20 +132,31 @@ params:
 
 
     - Name: "Testimonials"
-      enable: false
+      enable: True
       title: "Testimonials"
       #image: "/images/testimonials.png"
       cards:
-          - content: "he the most amazing amaze"
-            footer: "anonymous"
-          - content: "so much wow, so much amaze"
-            footer: "anonymous"
-          - content: "he the most amazing amaze"
-            footer: "anonymous"
+          - content: "I have truly had a transformative experience thanks to Ramez's coaching.  
+          He skillfully identified the root cause of my struggle, despite my initial belief that it was a mere matter of procrastination and fatigue.  
+          Now, [...] I feel less overwhelmed and better equipped to handle whatever comes my way.  
+          I was skeptical at first, but now I am a true believer in the magic of coaching.  
+          I highly recommend coaching by Ramez to anyone looking to make positive changes."
+            footer: "Mother and Software developer"
+          - content: "Mr. Ramez Hanna so far has been an exceptional and proficient coach. 
+          His proficiency in startup processes and product development is unparalleled and has set him apart from other coaches and mentors I have had the privilege of working with in the past. 
+          During our discussion sessions, he has consistently provided insightful guidance, leveraging his extensive knowledge and experience to yield positive results.
+          I highly recommend Mr. Hanna for the profound impact he has made in both my personal and professional life. 
+          His guidance and support have enabled me to overcome numerous challenges and achieve my goals, and I have no doubt that he will continue to inspire and impact those he coaches in the same way."
+            footer: "Entrepreneur and SW engineer "
+          - content: "Ramez has proved to be a dedicated coach.  
+          I had the pleasure of knowing Ramez and working with him over 3 months.
+          I was impressed with his ability to help me to identify my issues and how to make a transition from an engineer to a manager. 
+          I have learned from him more than I could ever expect, so I strongly recommend Ramez as a professional that you are willing to work with."
+            footer: "Robin Lui"
     - Name: "Aboutme"
       enable: true
       title: "About Me"
-      #image: "/images/me-yello.jpg"
+      image: "/images/ICC-IAC-style1.png"
       content: |-
         I had a career as an individual contributor in tech. Part of my job was to mentor less experienced engineers.  
         Later I moved into management, and started managing teams. This time mentoring was a big part of my job, both mentoring engineers and less experienced managers.  
