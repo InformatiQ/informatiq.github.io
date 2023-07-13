@@ -58,7 +58,7 @@ params:
     button:
       enable: true
       name: "Schedule a call"
-      url: "https://calendly.com/ramez-hanna/45-minute-meeting"
+      url: "https://cal.com/ramezhanna/short"
       download: false
     socialLinks:
       fontAwesomeIcons:
